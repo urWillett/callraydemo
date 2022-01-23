@@ -64,4 +64,16 @@ public class UserController {
         return new ResponseModel();
     }
 
+    @GetMapping("allManagerId")
+    public ResponseModel getAllManagerId(){
+        List<Integer> managerIDs=null;
+        try {
+            managerIDs= tx_managerAgentRepository.selectAllManagerID();
+        }catch(Exception e){
+            String msg="";
+            return  new ResponseModel(null,false,msg=e.getMessage());
+        }
+        return new ResponseModel(managerIDs,true,"请求成功");
+    }
+
 }

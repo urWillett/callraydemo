@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.callrayrecordmanagementsystem.Repository.Tx_accountRepository">
+<mapper namespace="com.example.callraydemo.Repository.Tx_accountRepository">
 
     <select id="queryTx_accountList" resultType="tx_account">
         select * from tx_account

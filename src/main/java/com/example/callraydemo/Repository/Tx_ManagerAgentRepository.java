@@ -20,4 +20,8 @@ public interface Tx_ManagerAgentRepository {
     @Insert("insert into tx_ManagerAgent(manager_id,agent_id) values(#{manager_id},#{agent_id})")
     void insertManagerAgent(tx_ManagerAgent tx_managerAgent);
 
+    //查询所有的manager id(只获取id值)
+    @Select("select distinct manager_id from tx_ManagerAgent")
+    List<Integer> selectAllManagerID();
+
 }
